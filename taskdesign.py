@@ -1,6 +1,5 @@
 import PyQt5.QtWidgets as qtw
 import task14 as window
-#from PyQt5.QtWidgets import QLineEdit
 
 class mainwindow(qtw.QMainWindow,window.Ui_ToDoList):
     def __init__(self):
@@ -8,6 +7,7 @@ class mainwindow(qtw.QMainWindow,window.Ui_ToDoList):
         self.setupUi(self)
         self.tasks = []
         self.addtask.clicked.connect(self.add_task)
+        self.search.clicked.connect(self.search_task)
         self.deletetask.clicked.connect(self.delete_task)
         self.deleteall.clicked.connect(self.delete_all)
         self.exit.clicked.connect(self.Exit)        
@@ -19,7 +19,14 @@ class mainwindow(qtw.QMainWindow,window.Ui_ToDoList):
         self.addedtask.clear()
         self.duetask.clear()
 
-
+    def search_task(self):  
+        text = self.searchtask.toPlainText()
+        for task_item in self.tasks:
+            if text in (task_item["task"]):
+                self.searching.clear()
+                self.searching.addItem(text)
+                self.searchtask.clear()
+                
     def delete_task(self):
         selecteditems=self.listoftasks.selectedItems()
         if selecteditems:
@@ -34,7 +41,6 @@ class mainwindow(qtw.QMainWindow,window.Ui_ToDoList):
 
     def Exit(self):
         win.close()
-        
 app = qtw.QApplication([])
 win=mainwindow()
 win.show()

@@ -988,7 +988,7 @@ p, li { white-space: pre-wrap; }
       <x>90</x>
       <y>290</y>
       <width>221</width>
-      <height>251</height>
+      <height>255</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -1236,6 +1236,38 @@ background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>duedatate:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255)
+</string>
+    </property>
+    <property name="text">
+     <string>searching:</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="searching">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>30</y>
+      <width>256</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+</string>
     </property>
    </widget>
   </widget>

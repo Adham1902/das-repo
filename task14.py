@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'task14.2.ui'
+# Form implementation generated from reading ui file 'task14.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -346,7 +346,7 @@ class Ui_ToDoList(object):
         self.setask.setStyleSheet("color:rgb(255, 255, 255)")
         self.setask.setObjectName("setask")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(90, 290, 221, 251))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(90, 290, 221, 255))
         self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -460,6 +460,17 @@ class Ui_ToDoList(object):
         self.date.setFont(font)
         self.date.setStyleSheet("color:rgb(255, 255, 255)")
         self.date.setObjectName("date")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(290, 50, 71, 21))
+        self.label.setStyleSheet("font: 75 11pt \"MS Shell Dlg 2\";\n"
+"color:rgb(255, 255, 255)\n"
+"")
+        self.label.setObjectName("label")
+        self.searching = QtWidgets.QListWidget(self.centralwidget)
+        self.searching.setGeometry(QtCore.QRect(360, 30, 256, 61))
+        self.searching.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"")
+        self.searching.setObjectName("searching")
         ToDoList.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ToDoList)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 634, 21))
@@ -492,3 +503,4 @@ class Ui_ToDoList(object):
         self.tasks.setText(_translate("ToDoList", "tasks:"))
         self.task.setText(_translate("ToDoList", "task:"))
         self.date.setText(_translate("ToDoList", "duedatate:"))
+        self.label.setText(_translate("ToDoList", "searching:"))
